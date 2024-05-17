@@ -95,11 +95,11 @@ def main():
     
     fuel_cost = 0
     if fuel_type_usage == "Gasoline":
-        fuel_cost = 0.95 / 100
+        fuel_cost = 0.95
     elif fuel_type_usage == "Diesel":
-        fuel_cost = 1.03 / 100
+        fuel_cost = 1.03
     elif fuel_type_usage == "Electro":
-        fuel_cost = 0.1545 / 100
+        fuel_cost = 0.1545
         
     if st.button("Calculate Future Value and Costs"):
         input_data = preprocess_input(engine_type, make_name, model_name, body_type, fuel_type, transmission,
@@ -110,7 +110,7 @@ def main():
         
         total_mileage = mileage + (annual_mileage * usage_years)
         average_fuel_economy = (city_fuel_economy + highway_fuel_economy) / 2
-        usage_costs = annual_mileage * average_fuel_economy * fuel_cost * usage_years
+        usage_costs = (annual_mileage/ average_fuel_economy) * fuel_cost * usage_years
         
         depreciation_rate = 0.15
         future_price = price * (1 - depreciation_rate) ** usage_years
