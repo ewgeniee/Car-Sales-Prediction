@@ -67,8 +67,8 @@ def main():
     
     make_name = st.selectbox("Make Name", label_encoders["make_name"].classes_)
     model_name = st.selectbox("Model Name", label_encoders["model_name"].classes_)
-    mileage = st.number_input("Mileage", 0, 1000000, 1000)
-    year = st.slider("Year", 1950, 2024, 1)
+    mileage = st.number_input("Mileage", 1000, 1000000, 0)
+    year = st.slider("Year", 1, 2024, 1950)
     fuel_type = st.selectbox("Fuel Type", label_encoders["fuel_type"].classes_)
     transmission = st.selectbox("Transmission", label_encoders["transmission"].classes_)
     body_type = st.selectbox("Body Type", label_encoders["body_type"].classes_)
