@@ -30,8 +30,8 @@ def encode_features(data):
         
     return data
 
-def preprocess_input(engine_type, make_name, model_name, body_type, fuel_type, transmission, 
-                     wheel_system_display, mileage, year, horsepower, city_fuel_economy, highway_fuel_economy):
+def preprocess_input(make_name, model_name, year, mileage, transmission, body_type, fuel_type, horsepower, city_fuel_economy, highway_fuel_economy, engine_type, wheel_system_display):
+    
     average_fuel_economy = (city_fuel_economy + highway_fuel_economy) / 2
     
     data = pd.DataFrame({
