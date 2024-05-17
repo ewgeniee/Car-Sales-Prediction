@@ -67,7 +67,7 @@ def main():
     
     make_name = st.selectbox("Make Name", label_encoders["make_name"].classes_)
     model_name = st.selectbox("Model Name", label_encoders["model_name"].classes_)
-    mileage = st.slider("Mileage", min_value=0, max_value=1000000, value=0, step=1000, format='%d')
+    mileage = st.slider("Mileage", min_value=0, max_value=500000, value=0, step=1000, format='%d')
     year = st.slider("Year", min_value=1950, max_value=2024, value=1950,step=1, format='%d')
     fuel_type = st.selectbox("Fuel Type", label_encoders["fuel_type"].classes_)
     transmission = st.selectbox("Transmission", label_encoders["transmission"].classes_)
