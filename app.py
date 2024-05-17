@@ -89,7 +89,7 @@ def main():
     st.header("Calculate Future Value and Usage Costs")
     
     usage_years = st.number_input("Usage Period (Years)", min_value=1, value= 1, step=0.5)
-    annual_mileage = st.slider("Annual Mileage", min_value=0, max_value= 100000 value=0, step=1000, format='%d')
+    annual_mileage = st.slider("Annual Mileage", min_value=0, max_value= 100000, value=0, step=1000, format='%d')
     
     fuel_type_usage = st.selectbox("Fuel Type for Usage Costs", ["Gasoline", "Diesel", "Electro"])
     
