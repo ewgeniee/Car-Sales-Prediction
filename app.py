@@ -73,7 +73,7 @@ def main():
     transmission = st.selectbox("Transmission", label_encoders["transmission"].classes_)
     body_type = st.selectbox("Body Type", label_encoders["body_type"].classes_)
     engine_type = st.selectbox("Engine Type", label_encoders["engine_type"].classes_)
-    horsepower = st.number_input("Horsepower", step=1)
+    horsepower = st.number_input("Horsepower", min_value=0, value=0, step=1)
     city_fuel_economy = st.number_input("City Fuel Economy", min_value=0, max_value=100, value=0)
     highway_fuel_economy = st.number_input("Highway Fuel Economy", min_value=0, max_value=100, value=0)
     wheel_system_display = st.selectbox("Wheel System Display", label_encoders["wheel_system_display"].classes_)
