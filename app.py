@@ -65,18 +65,18 @@ def main():
     
     st.header("Input Vehicle Details")
     
-    engine_type = st.selectbox("Engine Type", label_encoders["engine_type"].classes_)
     make_name = st.selectbox("Make Name", label_encoders["make_name"].classes_)
     model_name = st.selectbox("Model Name", label_encoders["model_name"].classes_)
-    body_type = st.selectbox("Body Type", label_encoders["body_type"].classes_)
-    fuel_type = st.selectbox("Fuel Type", label_encoders["fuel_type"].classes_)
-    transmission = st.selectbox("Transmission", label_encoders["transmission"].classes_)
-    wheel_system_display = st.selectbox("Wheel System Display", label_encoders["wheel_system_display"].classes_)
     mileage = st.number_input("Mileage")
     year = st.number_input("Year", step=1)
+    fuel_type = st.selectbox("Fuel Type", label_encoders["fuel_type"].classes_)
+    transmission = st.selectbox("Transmission", label_encoders["transmission"].classes_)
+    body_type = st.selectbox("Body Type", label_encoders["body_type"].classes_)
+    engine_type = st.selectbox("Engine Type", label_encoders["engine_type"].classes_)
     horsepower = st.number_input("Horsepower", step=1)
     city_fuel_economy = st.number_input("City Fuel Economy")
     highway_fuel_economy = st.number_input("Highway Fuel Economy")
+    wheel_system_display = st.selectbox("Wheel System Display", label_encoders["wheel_system_display"].classes_)
     
     if st.button("Predict Price"):
         input_data = preprocess_input(engine_type, make_name, model_name, body_type, fuel_type, transmission,
